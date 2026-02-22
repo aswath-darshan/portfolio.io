@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aswath Darshan K G — Data Science Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Aswath Darshan K G — aspiring data scientist at Amrita University, specializing in deep learning, signal processing, and anomaly detection.">
+    <meta property="og:title" content="Aswath Darshan K G — Data Science Portfolio">
+    <meta property="og:description"
+        content="Building AI that understands signals & anomalies. Deep learning, LSTM fault detection, Fourier-SVD reconstruction.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#00d4aa">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+    <!-- Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js" defer></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ═══════════ CURSOR TRAIL ═══════════ -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">AD<span class="logo-dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════ FULLSCREEN SCROLL-SNAP SECTIONS ═══════════ -->
+    <div class="scroll-container" id="scrollContainer">
+
+        <!-- ══════ 1. HERO ══════ -->
+        <section id="home" class="section section-hero">
+            <div class="hero-bg">
+                <canvas id="starfield"></canvas>
+            </div>
+            <div class="section-inner">
+                <p class="hero-greeting">HELLO, I'M</p>
+                <h1 class="hero-name" id="glitchName">
+                    <span class="glitch-text" data-text="ASWATH DARSHAN K G">ASWATH DARSHAN K G</span>
+                </h1>
+                <p class="hero-title">Aspiring Data Scientist</p>
+                <p class="hero-uni">Amrita University &bull; 2nd Year AIDS</p>
+                <div class="hero-typing-wrap">
+                    <span class="typing-text" id="typingText"></span><span class="typing-cursor">|</span>
+                </div>
+                <div class="hero-cards">
+                    <div class="floating-card fc-1">
+                        <span class="fc-icon">🧠</span>
+                        <span>AI that detects anomalies in signals</span>
+                    </div>
+                    <div class="floating-card fc-2">
+                        <span class="fc-icon">📊</span>
+                        <span>Deep Learning &amp; Signal Processing</span>
+                    </div>
+                </div>
+                <a href="#projects" class="btn btn-primary hero-cta" data-nav="projects">
+                    EXPLORE <span class="btn-arrow">→</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ══════ 2. ABOUT ══════ -->
+        <section id="about" class="section section-about">
+            <div class="section-inner about-layout">
+                <div class="about-left">
+                    <div class="about-photo-orbit">
+                        <div class="orbit-ring"></div>
+                        <div class="orbit-ring orbit-ring-2"></div>
+                        <div class="about-photo-wrap">
+                            <img src="assets/profile.jpg" alt="Aswath Darshan K G" class="about-photo" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="about-right">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="about-glow-block">
+                        <p>Data science enthusiast from <strong>Thiruvananthapuram, Kerala</strong>.</p>
+                        <p>Mastering deep learning for signal processing &amp; anomaly detection.</p>
+                    </div>
+                    <div class="about-glow-block">
+                        <p><strong>2nd Year</strong> — Amrita School of AI &amp; Data Science</p>
+                        <p>Current: LSTM fault detection, Fourier-SVD reconstruction</p>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item" data-delay="0">
+                            <span class="tl-dot"></span><span class="tl-label">Python</span>
+                        </div>
+                        <div class="timeline-item" data-delay="1">
+                            <span class="tl-dot"></span><span class="tl-label">TensorFlow</span>
+                        </div>
+                        <div class="timeline-item" data-delay="2">
+                            <span class="tl-dot"></span><span class="tl-label">Signal Processing</span>
+                        </div>
+                        <div class="timeline-item" data-delay="3">
+                            <span class="tl-dot"></span><span class="tl-label">Anomaly Detection</span>
+                        </div>
+                    </div>
+                    <div class="about-socials">
+                        <a href="https://github.com/Aswath-prof" target="_blank" rel="noopener" class="social-link"
+                            aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z" />
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/aswathdarshan" target="_blank" rel="noopener"
+                            class="social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </a>
+                        <a href="mailto:aswathdarshan2007@gmail.com" class="social-link" aria-label="Email">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════ 3. SKILLS ══════ -->
+        <section id="skills" class="section section-skills">
+            <div class="section-inner">
+                <h2 class="section-title">Skills &amp; Tools</h2>
+                <div class="skills-bento" id="skillsBento">
+                    <div class="skill-tile" data-skill="Python">
+                        <span class="skill-emoji">🏆</span>
+                        <h3>Python</h3>
+                        <div class="skill-code">import pandas as pd</div>
+                    </div>
+                    <div class="skill-tile" data-skill="TensorFlow">
+                        <span class="skill-emoji">🔬</span>
+                        <h3>TensorFlow</h3>
+                        <div class="skill-code">model.fit(X, y)</div>
+                    </div>
+                    <div class="skill-tile" data-skill="Data Science">
+                        <span class="skill-emoji">📊</span>
+                        <h3>Data Science</h3>
+                        <div class="skill-bar"><span class="skill-fill" style="--w:92%"></span></div>
+                    </div>
+                    <div class="skill-tile" data-skill="Signal Processing">
+                        <span class="skill-emoji">⚙️</span>
+                        <h3>Signal Proc</h3>
+                        <svg class="wave-svg" viewBox="0 0 120 40">
+                            <path d="M0 20 Q15 0,30 20 T60 20 T90 20 T120 20" stroke="currentColor" fill="none"
+                                stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="skill-tile" data-skill="HTML/CSS/JS">
+                        <span class="skill-emoji">💻</span>
+                        <h3>HTML/CSS/JS</h3>
+                        <div class="skill-code">&lt;div class="wow"&gt;</div>
+                    </div>
+                    <div class="skill-tile" data-skill="Jupyter">
+                        <span class="skill-emoji">🎛️</span>
+                        <h3>Jupyter</h3>
+                        <div class="skill-code">In [1]: ▊</div>
+                    </div>
+                    <div class="skill-tile" data-skill="Git">
+                        <span class="skill-emoji">🔄</span>
+                        <h3>Git</h3>
+                        <div class="skill-code">git push origin</div>
+                    </div>
+                    <div class="skill-tile" data-skill="Linux">
+                        <span class="skill-emoji">�</span>
+                        <h3>Linux</h3>
+                        <div class="skill-code">$ sudo apt ▊</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════ 4. PROJECTS ══════ -->
+        <section id="projects" class="section section-projects">
+            <div class="section-inner">
+                <h2 class="section-title">Projects</h2>
+                <div class="project-carousel" id="projectCarousel">
+                    <div class="project-slide active" data-index="0">
+                        <div class="project-visual pv-lstm">
+                            <svg class="vibration-wave" viewBox="0 0 400 100">
+                                <path id="vibPath" d="" stroke="var(--teal)" fill="none" stroke-width="2.5" />
+                                <path id="anomalyPath" d="" stroke="#ef4444" fill="none" stroke-width="3"
+                                    opacity="0.8" />
+                            </svg>
+                        </div>
+                        <div class="project-info">
+                            <h3>LSTM Anomaly Detection</h3>
+                            <p>Industrial AI detecting machine bearing failure from vibration sensors — real-time fault
+                                detection with 95% accuracy</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Aswath-prof" target="_blank" rel="noopener"
+                                    class="btn btn-sm btn-outline">GitHub</a>
+                                <a href="#" class="btn btn-sm btn-teal">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-slide" data-index="1">
+                        <div class="project-visual pv-fourier">
+                            <div class="signal-compare">
+                                <div class="signal-noisy">
+                                    <span class="signal-label">Noisy</span>
+                                    <svg viewBox="0 0 200 60">
+                                        <path class="noisy-path" d="" stroke="var(--purple)" fill="none"
+                                            stroke-width="1.5" />
+                                    </svg>
+                                </div>
+                                <div class="signal-arrow">→</div>
+                                <div class="signal-clean">
+                                    <span class="signal-label">Clean</span>
+                                    <svg viewBox="0 0 200 60">
+                                        <path class="clean-path" d="" stroke="var(--teal)" fill="none"
+                                            stroke-width="2" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Fourier-SVD Reconstruction</h3>
+                            <p>Noise-resilient biomedical signal processing — hybrid mathematical + ML approach for
+                                signal reconstruction</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Aswath-prof" target="_blank" rel="noopener"
+                                    class="btn btn-sm btn-outline">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-slide" data-index="2">
+                        <div class="project-visual pv-portfolio">
+                            <div class="self-demo">
+                                <div class="mini-screen">
+                                    <div class="mini-nav"></div>
+                                    <div class="mini-hero"></div>
+                                    <div class="mini-grid">
+                                        <div class="mini-card"></div>
+                                        <div class="mini-card"></div>
+                                        <div class="mini-card"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Responsive Portfolio</h3>
+                            <p>You're viewing it now! Pure HTML/CSS/JS with cinematic fullscreen transitions and GSAP
+                                animations</p>
+                            <div class="project-meta-tag">You made this! 🎉</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn" id="prevProject" aria-label="Previous">←</button>
+                    <div class="carousel-dots" id="carouselDots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="carousel-btn" id="nextProject" aria-label="Next">→</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════ 5. CONTACT ══════ -->
+        <section id="contact" class="section section-contact">
+            <canvas id="geoCanvas" class="geo-bg"></canvas>
+            <div class="section-inner contact-layout">
+                <div class="contact-form-wrap">
+                    <h2 class="section-title">Get in Touch</h2>
+                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/xpwzgkvl" method="POST"
+                        novalidate>
+                        <div class="form-group">
+                            <input type="text" id="formName" name="name" placeholder="Your Name" required
+                                autocomplete="name">
+                            <span class="field-error" id="nameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="formEmail" name="email" placeholder="Your Email" required
+                                autocomplete="email">
+                            <span class="field-error" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="formMessage" name="message" placeholder="Your Message" rows="4"
+                                required></textarea>
+                            <span class="field-error" id="messageError"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-send" id="sendBtn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loader" hidden></span>
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-cv-wrap">
+                    <h2 class="section-title">Resume</h2>
+                    <p class="cv-desc">Download my latest resume in PDF format.</p>
+                    <a href="assets/Aswath_Darshan_Resume.pdf" class="btn btn-cv" download>
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                            <path d="M5 20h14v-2H5v2zm7-18v12.17l3.59-3.58L17 12l-5 5-5-5 1.41-1.41L12 14.17V2z" />
+                        </svg>
+                        Download Resume.pdf
+                    </a>
+                    <div class="contact-socials-orbit">
+                        <a href="https://github.com/Aswath-prof" target="_blank" rel="noopener" class="orbit-social"
+                            aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z" />
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/aswathdarshan" target="_blank" rel="noopener"
+                            class="orbit-social" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </a>
+                        <a href="mailto:aswathdarshan2007@gmail.com" class="orbit-social" aria-label="Email">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
