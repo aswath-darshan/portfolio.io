@@ -216,11 +216,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Animate Projects — show first card
-    function animateProjects() {
-        generateVibrationWave();
-        generateSignalPaths();
-    }
+    // Animate Projects — single project card, no animations needed
+    function animateProjects() { /* placeholder for future project animations */ }
 
     /* ═══════════ PROJECT CAROUSEL ═══════════ */
     const slides = document.querySelectorAll('.project-slide');
@@ -250,57 +247,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'ArrowLeft') showSlide((currentSlide - 1 + slides.length) % slides.length);
     });
 
-    /* ═══════════ VIBRATION WAVE (Project 1) ═══════════ */
-    function generateVibrationWave() {
-        const vibPath = document.getElementById('vibPath');
-        const anomalyPath = document.getElementById('anomalyPath');
-        if (!vibPath) return;
-
-        let frame = 0;
-        function drawWave() {
-            frame++;
-            let d = 'M0 50 ';
-            let ad = 'M0 50 ';
-            for (let x = 0; x <= 400; x += 2) {
-                const y = 50 + Math.sin(x * 0.05 + frame * 0.08) * 20
-                    + Math.sin(x * 0.12 + frame * 0.05) * 8;
-                d += `L${x} ${y} `;
-
-                // Anomaly spikes at intervals
-                const isAnomaly = (x > 180 && x < 220) || (x > 320 && x < 350);
-                const ay = isAnomaly
-                    ? 50 + Math.sin(x * 0.3 + frame * 0.15) * 35
-                    : y;
-                ad += `L${x} ${ay} `;
-            }
-            vibPath.setAttribute('d', d);
-            anomalyPath.setAttribute('d', ad);
-            requestAnimationFrame(drawWave);
-        }
-        drawWave();
-    }
-
-    /* ═══════════ SIGNAL PATHS (Project 2) ═══════════ */
-    function generateSignalPaths() {
-        const noisyPaths = document.querySelectorAll('.noisy-path');
-        const cleanPaths = document.querySelectorAll('.clean-path');
-
-        let frame = 0;
-        function drawSignals() {
-            frame++;
-            let noisy = 'M0 30 ';
-            let clean = 'M0 30 ';
-            for (let x = 0; x <= 200; x += 2) {
-                const base = Math.sin(x * 0.06 + frame * 0.04) * 18;
-                noisy += `L${x} ${30 + base + (Math.random() - 0.5) * 16} `;
-                clean += `L${x} ${30 + base} `;
-            }
-            noisyPaths.forEach(p => p.setAttribute('d', noisy));
-            cleanPaths.forEach(p => p.setAttribute('d', clean));
-            requestAnimationFrame(drawSignals);
-        }
-        drawSignals();
-    }
 
     /* ═══════════ GEOMETRY CANVAS (Contact) ═══════════ */
     const geoCanvas = document.getElementById('geoCanvas');

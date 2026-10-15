@@ -213,82 +213,41 @@
                 <h2 class="section-title">Projects</h2>
                 <div class="project-carousel" id="projectCarousel">
                     <div class="project-slide active" data-index="0">
-                        <div class="project-visual pv-lstm">
-                            <svg class="vibration-wave" viewBox="0 0 400 100">
-                                <path id="vibPath" d="" stroke="var(--teal)" fill="none" stroke-width="2.5" />
-                                <path id="anomalyPath" d="" stroke="#ef4444" fill="none" stroke-width="3"
-                                    opacity="0.8" />
-                            </svg>
-                        </div>
-                        <div class="project-info">
-                            <h3>LSTM Anomaly Detection</h3>
-                            <p>Industrial AI detecting machine bearing failure from vibration sensors — real-time fault
-                                detection with 95% accuracy</p>
-                            <div class="project-links">
-                                <a href="https://github.com/aswath-darshan/lstm-bearing-fault" class="btn btn-sm btn-outline" target="_blank" rel="noopener">GitHub</a>
-                                <a href="#" class="btn btn-sm btn-teal">Live Demo</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-slide" data-index="1">
-                        <div class="project-visual pv-fourier">
-                            <div class="signal-compare">
-                                <div class="signal-noisy">
-                                    <span class="signal-label">Noisy</span>
-                                    <svg viewBox="0 0 200 60">
-                                        <path class="noisy-path" d="" stroke="var(--purple)" fill="none"
-                                            stroke-width="1.5" />
-                                    </svg>
+                        <div class="project-visual pv-cv">
+                            <div class="cv-demo">
+                                <div class="cv-tracks">
+                                    <div class="cv-track cv-track-1"></div>
+                                    <div class="cv-track cv-track-2"></div>
+                                    <div class="cv-track cv-track-3"></div>
                                 </div>
-                                <div class="signal-arrow">→</div>
-                                <div class="signal-clean">
-                                    <span class="signal-label">Clean</span>
-                                    <svg viewBox="0 0 200 60">
-                                        <path class="clean-path" d="" stroke="var(--teal)" fill="none"
-                                            stroke-width="2" />
-                                    </svg>
+                                <div class="cv-labels">
+                                    <span class="cv-label" style="top:20%;left:15%">ByteTrack</span>
+                                    <span class="cv-label" style="top:55%;left:55%">BoTSORT</span>
+                                    <span class="cv-label" style="top:75%;left:25%">DeepSORT</span>
                                 </div>
+                                <div class="cv-badge">MOTA 68.4%</div>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3>Fourier-SVD Reconstruction</h3>
-                            <p>Noise-resilient biomedical signal processing — hybrid mathematical + ML approach for
-                                signal reconstruction</p>
-                            <div class="project-links">
-                                <a href="https://github.com/aswath-darshan/fourier-svd" class="btn btn-sm btn-outline" target="_blank" rel="noopener">GitHub</a>
+                            <h3>Real-Time Multi-Object Tracking</h3>
+                            <p>Full-stack benchmarking system comparing ByteTrack, BoTSORT, and DeepSORT on YOLOv8 detections — with a React dashboard for live metric visualization. Best tracker achieved <strong>MOTA 68.4%</strong> at <strong>28 FPS</strong>.</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">YOLOv8</span>
+                                <span class="tag">React</span>
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">Computer Vision</span>
                             </div>
-                        </div>
-                    </div>
-                    <div class="project-slide" data-index="2">
-                        <div class="project-visual pv-portfolio">
-                            <div class="self-demo">
-                                <div class="mini-screen">
-                                    <div class="mini-nav"></div>
-                                    <div class="mini-hero"></div>
-                                    <div class="mini-grid">
-                                        <div class="mini-card"></div>
-                                        <div class="mini-card"></div>
-                                        <div class="mini-card"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Responsive Portfolio</h3>
-                            <p>You're viewing it now! Pure HTML/CSS/JS with cinematic fullscreen transitions and GSAP
-                                animations</p>
                             <div class="project-links">
-                                <a href="https://github.com/aswath-darshan/portfolio.io" class="btn btn-sm btn-outline" target="_blank" rel="noopener">GitHub</a>
+                                <a href="https://github.com/aswath-darshan/Computer-Vision" class="btn btn-sm btn-outline" target="_blank" rel="noopener">GitHub</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-controls">
+                <div class="carousel-controls" style="visibility:hidden;pointer-events:none;">
                     <button class="carousel-btn" id="prevProject" aria-label="Previous">←</button>
                     <div class="carousel-dots" id="carouselDots">
                         <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
                     </div>
                     <button class="carousel-btn" id="nextProject" aria-label="Next">→</button>
                 </div>
