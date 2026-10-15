@@ -82,9 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* ═══════════ TYPING ANIMATION ═══════════ */
     const phrases = [
-        'AI that detects anomalies in signals',
-        'LSTM fault detection from vibration data',
-        'Fourier-SVD for biomedical signal processing',
+        'Real-Time Multi-Object Tracking',
+        'Benchmarking ByteTrack · BoTSORT · DeepSORT',
+        'YOLOv8 detections at 28 FPS',
         'Exploring deep learning at Amrita University'
     ];
     const typingEl = document.getElementById('typingText');
